@@ -167,12 +167,12 @@ class _BodyState extends State<_Body> {
   Widget build(BuildContext context) {
     return (_progressDialogType == ProgressDialogType.Simple)?
       Container(
-        padding: EdgeInsets.all(10.0),
-        height: 200.0,
+        padding: EdgeInsets.all(20.0),
+        // height: 200.0,
         child: Column(
           children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top:40.0, bottom: 20.0),
+                padding: const EdgeInsets.only(top:50.0, bottom: 20.0),
                 child: Text(
                 _dialogMessage, 
                 style: _messageStyle,
