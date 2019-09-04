@@ -168,7 +168,7 @@ class _BodyState extends State<_Body> {
     return (_progressDialogType == ProgressDialogType.Simple)?
       Container(
         padding: EdgeInsets.all(20.0),
-        // height: 200.0,
+        height: MediaQuery.of(context).size.height * 0.2,
         child: Column(
           children: <Widget>[
               Padding(
