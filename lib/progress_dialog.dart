@@ -165,16 +165,33 @@ class _BodyState extends State<_Body> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return (_progressDialogType == ProgressDialogType.Simple)?
+      SizedBox(
+        height: 100.0,
+        child: Column(
+          children: <Widget>[
+              Text(
+              _dialogMessage, 
+              style: _messageStyle
+            ),
+            SizedBox(
+              width: 60.0,
+              height: 60.0,
+              child: _progressWidget,
+            ),
+          ],
+        ),
+      ) 
+      : SizedBox(
       height: 100.0,
-      child: Column(children: <Widget>[
-        // const SizedBox(width: 10.0),
+      child: Row(children: <Widget>[
+        const SizedBox(width: 10.0),
         SizedBox(
           width: 60.0,
           height: 60.0,
           child: _progressWidget,
         ),
-        // const SizedBox(width: 15.0),
+        const SizedBox(width: 15.0),
         Expanded(
           child: _progressDialogType == ProgressDialogType.Normal
               ? Text(_dialogMessage,
@@ -185,16 +202,16 @@ class _BodyState extends State<_Body> {
                       _dialogMessage, 
                       style: _messageStyle
                     ),
-                    // Positioned(
-                    //   child: Text("$_progress/$_maxProgress",
-                    //       style: _progressTextStyle),
-                    //   bottom: 10.0,
-                    //   right: 10.0,
-                    // ),
+                    Positioned(
+                      child: Text("$_progress/$_maxProgress",
+                          style: _progressTextStyle),
+                      bottom: 10.0,
+                      right: 10.0,
+                    ),
                   ],
                 ),
         ),
-        // const SizedBox(width: 10.0)
+        const SizedBox(width: 10.0)
       ]),
     );
   }
