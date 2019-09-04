@@ -171,12 +171,15 @@ class _BodyState extends State<_Body> {
         height: 200.0,
         child: Column(
           children: <Widget>[
-              Text(
-              _dialogMessage, 
-              style: _messageStyle,
-              overflow: TextOverflow.fade,
-              textAlign: TextAlign.center,
+              Padding(
+                padding: const EdgeInsets.only(top:40.0, bottom: 20.0),
+                child: Text(
+                _dialogMessage, 
+                style: _messageStyle,
+                overflow: TextOverflow.fade,
+                textAlign: TextAlign.center,
             ),
+              ),
             SizedBox(
               width: 60.0,
               height: 60.0,
