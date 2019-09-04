@@ -155,24 +155,27 @@ class _BodyState extends State<_Body> {
   void dispose() {
     _isShowing = false;
     debugPrint('ProgressDialog dismissed by back button');
-    if (Navigator.canPop(_dismissingContext)) {
-      try {
-        Navigator.pop(_dismissingContext);
-      } catch (_) {}
-    }
+    // if (Navigator.canPop(_dismissingContext)) {
+    //   try {
+    //     Navigator.pop(_dismissingContext);
+    //   } catch (_) {}
+    // }
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return (_progressDialogType == ProgressDialogType.Simple)?
-      SizedBox(
-        height: 100.0,
+      Container(
+        padding: EdgeInsets.all(10.0),
+        height: 200.0,
         child: Column(
           children: <Widget>[
               Text(
               _dialogMessage, 
-              style: _messageStyle
+              style: _messageStyle,
+              overflow: TextOverflow.fade,
+              textAlign: TextAlign.center,
             ),
             SizedBox(
               width: 60.0,
