@@ -167,7 +167,7 @@ class _BodyState extends State<_Body> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 100.0,
-      child: Row(children: <Widget>[
+      child: Column(children: <Widget>[
         const SizedBox(width: 10.0),
         SizedBox(
           width: 60.0,
@@ -185,12 +185,12 @@ class _BodyState extends State<_Body> {
                       child: Text(_dialogMessage, style: _messageStyle),
                       top: 30.0,
                     ),
-                    Positioned(
-                      child: Text("$_progress/$_maxProgress",
-                          style: _progressTextStyle),
-                      bottom: 10.0,
-                      right: 10.0,
-                    ),
+                    // Positioned(
+                    //   child: Text("$_progress/$_maxProgress",
+                    //       style: _progressTextStyle),
+                    //   bottom: 10.0,
+                    //   right: 10.0,
+                    // ),
                   ],
                 ),
         ),
