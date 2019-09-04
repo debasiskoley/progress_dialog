@@ -155,9 +155,9 @@ class _BodyState extends State<_Body> {
   void dispose() {
     _isShowing = false;
     debugPrint('ProgressDialog dismissed by back button');
-    if (Navigator.of(_dismissingContext).canPop()) {
+    if (Navigator.canPop(_dismissingContext)) {
       try {
-        Navigator.of(_dismissingContext).pop();
+        Navigator.pop(_dismissingContext);
       } catch (_) {}
     }
     super.dispose();
@@ -181,9 +181,9 @@ class _BodyState extends State<_Body> {
                   textAlign: TextAlign.justify, style: _messageStyle)
               : Stack(
                   children: <Widget>[
-                    Positioned(
-                      child: Text(_dialogMessage, style: _messageStyle),
-                      top: 30.0,
+                    Text(
+                      _dialogMessage, 
+                      style: _messageStyle
                     ),
                     // Positioned(
                     //   child: Text("$_progress/$_maxProgress",
