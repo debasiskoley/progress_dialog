@@ -168,13 +168,13 @@ class _BodyState extends State<_Body> {
     return SizedBox(
       height: 100.0,
       child: Column(children: <Widget>[
-        const SizedBox(width: 10.0),
+        // const SizedBox(width: 10.0),
         SizedBox(
           width: 60.0,
           height: 60.0,
           child: _progressWidget,
         ),
-        const SizedBox(width: 15.0),
+        // const SizedBox(width: 15.0),
         Expanded(
           child: _progressDialogType == ProgressDialogType.Normal
               ? Text(_dialogMessage,
@@ -194,7 +194,7 @@ class _BodyState extends State<_Body> {
                   ],
                 ),
         ),
-        const SizedBox(width: 10.0)
+        // const SizedBox(width: 10.0)
       ]),
     );
   }
