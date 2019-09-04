@@ -170,9 +170,11 @@ class _BodyState extends State<_Body> {
         padding: EdgeInsets.all(20.0),
         height: MediaQuery.of(context).size.height * 0.4,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top:50.0, bottom: 20.0),
+                padding: const EdgeInsets.only(bottom: 20.0),
                 child: Text(
                 _dialogMessage, 
                 style: _messageStyle,
